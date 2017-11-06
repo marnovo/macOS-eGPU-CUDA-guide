@@ -183,6 +183,11 @@ As a rule-of-thumb, mind your macOS, Xcode, NVIDIA drivers and CUDA versions and
 
 After installing CUDA, you may want to download and run [CUDA-Z](http://cuda-z.sourceforge.net/) for testing and statistics.
 
+Another way of detecting CUDA devices, if you have chosen to install NVIDIA CUDA Samples, is to use `DeviceQuery`: 
+1. Go to the directory where CUDA Samples where installed, e.g.: `~/NVIDIA_CUDA-9.0_Samples/1_Utilities/deviceQuery`.
+2. On your terminal run: `make -f Makefile` to compile the application.
+3. Once compiled, you can run it as `./deviceQuery` to identify CUDA-capable devices. [Sample output](https://gist.github.com/marnovo/7e9f0b36b6e199ccf08f3c8f3cefc4a9).
+
 #### Known CUDA bugs and quirks
 
 ##### At compile time
