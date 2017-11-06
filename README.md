@@ -1,7 +1,7 @@
 # Guide on running NVIDIA eGPUs (with CUDA) on macOS
 
-Sample set up for CUDA machine learning and gaming on macOS using a NVIDIA eGPU, 
-and some references and generalizations that will apply to most hardware.
+Sample set up for [CUDA](https://developer.nvidia.com/about-cuda) programming for machine learning and gaming on [macOS](https://www.wikiwand.com/en/MacOS) using a NVIDIA eGPU, 
+plus references, tutorials and generalizations that will apply to most hardware.
 
 ## Table of Contents
 
@@ -13,7 +13,7 @@ and some references and generalizations that will apply to most hardware.
     - [Cables and adapters](#cables-and-adapters)
   - [Software](#software)
     - [General](#general)
-    - [Machine Learning](#machine-learning)
+    - [CUDA Programming and Machine Learning](#cuda-programming-and-machine-learning)
     - [Gaming](#gaming)
 - [Step-by-step Tutorials](#step-by-step-tutorials)
   - [eGPU on macOS High Sierra](#egpu-on-macos-high-sierra)
@@ -81,7 +81,7 @@ other options can be checked at [eGPU.io buyer's guide](https://egpu.io/external
   - If on macOS 12.6 (Sierra) or earlier: [Automate eGPU script](https://github.com/goalque/automate-eGPU)
 - [NVIDIA Web drivers](https://www.tonymacx86.com/nvidia-drivers/), just match your OS version with driver version.
 
-#### Machine Learning
+#### CUDA Programming and Machine Learning
 
 - [NVIDIA CUDA drivers](http://docs.nvidia.com/cuda/cuda-installation-guide-mac-os-x/)
 - [Tensorflow](https://www.tensorflow.org)
