@@ -19,6 +19,7 @@ plus references, tutorials and generalizations that will apply to most hardware.
   - [eGPU on macOS High Sierra](#egpu-on-macos-high-sierra)
   - [eGPU on macOS Sierra and earlier](#egpu-on-macos-sierra-and-earlier)
   - [CUDA on macOS](#cuda-on-macos)
+    - [Known CUDA bugs and quirks](#known-cuda-bugs-and-quirks)
 
 ## Requirements
 
@@ -174,9 +175,43 @@ I will do my best to keep this updated with the intrincacies of the process as p
 
 ### CUDA on macOS
 
-For now I recommend [NVIDIA's CUDA on macOS tutorial page](http://docs.nvidia.com/cuda/cuda-installation-guide-mac-os-x/), 
-as it is very extensive, detailed and up-to-date. If it falls short eventually in the future, it will be added to the guide.
-Pay attention in particular to your NVIDIA, CUDA, and Xcode versions.
+For now I recommend [NVIDIA's CUDA on macOS installation guide](http://docs.nvidia.com/cuda/cuda-installation-guide-mac-os-x/), 
+as it is very extensive, detailed and up-to-date. 
+So far you can trust it, but you might run into a few quirks covered below. 
+As a rule-of-thumb, mind your macOS, Xcode, NVIDIA drivers and CUDA versions and *always research before updating any of them*.
+
+#### Known CUDA bugs and quirks
+
+##### At compile time
+
+**`nvcc fatal   : The version ('xxxxx') of the host compiler ('Apple clang') is not supported` error:**
+
+This error is fairly common if you tend to keep your Xcode and/or C compiler up-to-date. 
+It is caused by an incompatibility between the current Xcode (clang) compiler version installed and "active", 
+and the versions supported by CUDA, which usually lags some months behind.
+  
+The fix is straightforward, but might be time consuming given Xcode humongous size:
+
+1. Check the latest version of Xcode supported by CUDA in NVIDIA's [installation guide requirements for macOS](http://docs.nvidia.com/cuda/cuda-installation-guide-mac-os-x/#system-requirements).
+2. Download the above respective version in [Apple's Developer downloads page](https://developer.apple.com/download/more/).
+3. Unpack the zip file and rename the extracted `Xcode.app` adding the version it corresponds to, 
+to avoid name collision and help you discern between the latest and last compatible versions, e.g.: `Xcode_8.3.3.app`.
+4. From you terminal, run:
+   `sudo xcode-select -s /path/to/your/Xcode_8.3.3.app/Contents/Developer` (requires administrator privileges).
+5. You can also use a [simple bash script I provided](xcode-switcher-for-cuda.sh) to select the "active" Xcode version. 
+Just make sure to edit it accordingly with your paths and filenames.
+
+##### At runtime
+
+**`Segmentation fault: 11` error:**
+
+You might get these errors when running (even successfully) compiled CUDA programs or ML libraries as TensorFlow.
+This is likely a NVIDIA mistake when naming and packaging the CUDA installation files, [as widely reported](https://github.com/tensorflow/tensorflow/issues/3263).
+
+You can easily fix this by creating a symbolic link between the library name called by CUDA and the existing one. 
+
+1. From your terminal, run:
+   `sudo ln -sf /usr/local/cuda/lib/libcuda.dylib /usr/local/cuda/lib/libcuda.1.dylib` (requires administrator privileges).
 
 ## License
 
@@ -185,4 +220,3 @@ MIT License
 Copyright (c) 2017 Marcelo Novaes
 
 For more information, see [LICENSE](LICENSE).
-
