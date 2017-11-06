@@ -20,6 +20,7 @@ plus references, tutorials and generalizations that will apply to most hardware.
   - [eGPU on macOS Sierra and earlier](#egpu-on-macos-sierra-and-earlier)
   - [CUDA on macOS](#cuda-on-macos)
     - [Known CUDA bugs and quirks](#known-cuda-bugs-and-quirks)
+- [License](#license)
 
 ## Requirements
 
@@ -213,9 +214,9 @@ The fix in this case involves creating a symbolic link between the library calle
 1. From your terminal, run:
    `sudo ln -sf /usr/local/cuda/lib/libcuda.dylib /usr/local/cuda/lib/libcuda.1.dylib` (requires administrator privileges).
 2. Add the following PATHs to your environment profile (e.g.: `~/.bash_profile`, `~/.zshrc` or equivalent):
-   1. `export CUDA_HOME=/usr/local/cuda`
-   2. `export DYLD_LIBRARY_PATH="$CUDA_HOME/lib:$DYLD_LIBRARY_PATH"`
-   3. `export PATH="$CUDA_HOME/bin:$PATH"`
+    1. Add `export CUDA_HOME=/usr/local/cuda`.
+    2. Add `export DYLD_LIBRARY_PATH="$CUDA_HOME/lib:$DYLD_LIBRARY_PATH"`.
+    3. Add `export PATH="$CUDA_HOME/bin:$PATH"`.
 3. Restart or reload your shell to apply the new PATHs.
 
 ## License
