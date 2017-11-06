@@ -205,13 +205,18 @@ Just make sure to edit it accordingly with your paths and filenames.
 
 **`Segmentation fault: 11` error:**
 
-You might get these errors when running (even successfully) compiled CUDA programs or ML libraries as TensorFlow.
-This is likely a NVIDIA mistake when naming and packaging the CUDA installation files, [as widely reported](https://github.com/tensorflow/tensorflow/issues/3263).
+You might get these errors when running (even successfully) compiled CUDA programs or ML libraries.
+This is likely a NVIDIA mistake when naming and packaging the CUDA installation files and setting PATHs, [as widely reported](https://github.com/tensorflow/tensorflow/issues/3263) by TensorFlow users.
 
-You can easily fix this by creating a symbolic link between the library name called by CUDA and the existing one. 
+The fix in this case involves creating a symbolic link between the library called and the existing one, as well as setting correct PATHs:
 
 1. From your terminal, run:
    `sudo ln -sf /usr/local/cuda/lib/libcuda.dylib /usr/local/cuda/lib/libcuda.1.dylib` (requires administrator privileges).
+2. Add the following PATHs to your environment profile (e.g.: `~/.bash_profile`, `~/.zshrc` or equivalent):
+   1. `export CUDA_HOME=/usr/local/cuda`
+   2. `export DYLD_LIBRARY_PATH="$CUDA_HOME/lib:$DYLD_LIBRARY_PATH"`
+   3. `export PATH="$CUDA_HOME/bin:$PATH"`
+3. Restart or reload your shell to apply the new PATHs.
 
 ## License
 
