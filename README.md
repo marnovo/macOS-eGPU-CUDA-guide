@@ -103,59 +103,59 @@ I will do my best to keep this updated with the intrincacies of the process as p
 
 1. Install macOS High Sierra (at this point v13.1).
 2. Check if [macOS System Integrity Protection](https://support.apple.com/en-us/HT204899) (SIP) is enabled and/or enable it:
-    i. Boot the computer in recovery mode: press and hold `Command⌘ + R` when hearing the chime sound.
-    ii. Open the `Terminal` application from the top menu.
-    iii. Type `csrutil status` and press `Enter↩︎` to see if SIP is enabled.
-    iv. If SIP *is not enabled*, type `csrutil enable`, press `Enter↩︎` and reboot.
-    v. Reboot.
+    1. Boot the computer in recovery mode: press and hold `Command⌘ + R` when hearing the chime sound.
+    2. Open the `Terminal` application from the top menu.
+    3. Type `csrutil status` and press `Enter↩︎` to see if SIP is enabled.
+    4. If SIP *is not enabled*, type `csrutil enable`, press `Enter↩︎` and reboot.
+    5. Reboot.
 3. Apply the High Sierra supplemental update (if necessary).
 4. Install the corresponding [NVIDIA Web Driver]([NVIDIA Web drivers](https://www.tonymacx86.com/nvidia-drivers/) to your OS version  (remember, SIP *must* be enabled here).
 5. Reboot and log in normally.
 6. Disable [macOS System Integrity Protection](https://support.apple.com/en-us/HT204899) (SIP):
-    i. Boot the computer in recovery mode: press and hold `Command⌘ + R` when hearing the chime sound.
-    ii. Open the `Terminal` application from the top menu.
-    iii. Type `csrutil status` and press `Enter↩︎` to see if SIP is enabled.
-    iv. If SIP *is enabled*, type `csrutil disable`, press `Enter↩︎`
-    v. Reboot.
+    1. Boot the computer in recovery mode: press and hold `Command⌘ + R` when hearing the chime sound.
+    2. Open the `Terminal` application from the top menu.
+    3. Type `csrutil status` and press `Enter↩︎` to see if SIP is enabled.
+    4. If SIP *is enabled*, type `csrutil disable`, press `Enter↩︎`
+    5. Reboot.
 8. Download and install the [NVIDIA eGPU v2 package](https://egpu.io/forums/mac-setup/wip-nvidia-egpu-support-for-high-sierra/paged/12/#post-23263) (if for whatever reason v2 does not work for you even after these exact steps, try v1).
 9. Shut down your computer.
 10. Now boot *without the eGPU connected*, log in normally, and again shut down your computer.
 11. Connect your eGPU enclosure and boot your computer:
-    i. In most cases it should work with the eGPU connected before turning the computer on.
-    ii. In case you see an indefinite black screen, only plug the eGPU after the chime sound, just when the Apple logo shows up.
+    1. In most cases it should work with the eGPU connected before turning the computer on.
+    2. In case you see an indefinite black screen, only plug the eGPU after the chime sound, just when the Apple logo shows up.
 12. Voilà!
 
-### eGPU on macos Sierra and earlier
+### eGPU on macOS Sierra and earlier
 
 1. Install macOS Sierra or slightly earlier (at this point v12.6).
 2. Check if [macOS System Integrity Protection](https://support.apple.com/en-us/HT204899) (SIP) is enabled and/or enable it:
-    i. Boot the computer in recovery mode: press and hold `Command⌘ + R` when hearing the chime sound.
-    ii. Open the `Terminal` application from the top menu.
-    iii. Type `csrutil status` and press `Enter↩︎` to see if SIP is enabled.
-    iv. If SIP *is not enabled*, type `csrutil enable`, press `Enter↩︎` and reboot.
-    v. Reboot.
+    1. Boot the computer in recovery mode: press and hold `Command⌘ + R` when hearing the chime sound.
+    2. Open the `Terminal` application from the top menu.
+    3. Type `csrutil status` and press `Enter↩︎` to see if SIP is enabled.
+    4. If SIP *is not enabled*, type `csrutil enable`, press `Enter↩︎` and reboot.
+    5. Reboot.
 3. Apply any supplemental updates (if necessary).
 4. Install the corresponding [NVIDIA Web Driver]([NVIDIA Web drivers](https://www.tonymacx86.com/nvidia-drivers/) to your OS version  (remember, SIP *must* be enabled here).
 5. Reboot and log in normally.
 6. Disable [macOS System Integrity Protection](https://support.apple.com/en-us/HT204899) (SIP):
-    i. Boot the computer in recovery mode: press and hold `Command⌘ + R` when hearing the chime sound.
-    ii. Open the `Terminal` application from the top menu.
-    iii. Type `csrutil status` and press `Enter↩︎` to see if SIP is enabled.
-    iv. If SIP *is enabled*, type `csrutil disable`, press `Enter↩︎`
-    v. Reboot.
+    1. Boot the computer in recovery mode: press and hold `Command⌘ + R` when hearing the chime sound.
+    2. Open the `Terminal` application from the top menu.
+    3. Type `csrutil status` and press `Enter↩︎` to see if SIP is enabled.
+    4. If SIP *is enabled*, type `csrutil disable`, press `Enter↩︎`
+    5. Reboot.
 8. Download the [automate-eGPU script](https://github.com/goalque/automate-eGPU)
 9. Decompress it your computer if downloaded as a zip file.
 10. Run the script with administrator privileges:
-    i. Open your `Terminal` application (or equivalent) from the application launcher, dock or Spotlight.
-    ii. Type `chmod +x` plus a space. This will allow you to run the script.
-    iii. Either drag & drop the `automate-eGPU.sh` file over the terminal or navigate to its directory.
-    iv. You should now have something like `chmod +x /this/is/the/dir/automate-eGPU.sh`, then press `Enter↩︎`.
-    v. Now type `sudo` plus a space. This will run the script with administrator privileges.
-    vi. Again, either drag & drop the `automate-eGPU.sh` file over the terminal or navigate to its directory.
-    vii. You should now have something like `sudo /this/is/the/dir/automate-eGPU.sh`, then press `Enter↩︎`.
-    viii. Type in your user password and press `Enter↩︎`.
-    ix. You will see [outputs similar to these](https://github.com/goalque/automate-eGPU).
-    x. Whenever asked to download NVIDIA drivers, type `y` and `Enter↩︎`.
+    1. Open your `Terminal` application (or equivalent) from the application launcher, dock or Spotlight.
+    2. Type `chmod +x` plus a space. This will allow you to run the script.
+    3. Either drag & drop the `automate-eGPU.sh` file over the terminal or navigate to its directory.
+    4. You should now have something like `chmod +x /this/is/the/dir/automate-eGPU.sh`, then press `Enter↩︎`.
+    5. Now type `sudo` plus a space. This will run the script with administrator privileges.
+    6. Again, either drag & drop the `automate-eGPU.sh` file over the terminal or navigate to its directory.
+    7. You should now have something like `sudo /this/is/the/dir/automate-eGPU.sh`, then press `Enter↩︎`.
+    8. Type in your user password and press `Enter↩︎`.
+    9. You will see [outputs similar to these](https://github.com/goalque/automate-eGPU).
+    10. Whenever asked to download NVIDIA drivers, type `y` and `Enter↩︎`.
 9. Reboot your computer normally.
 10. Turn on you eGPU enclosure and hot plug it into your computer via the respective Thunderbolt ports.
 11. Again, run the script with administrator privileges:
@@ -168,8 +168,8 @@ I will do my best to keep this updated with the intrincacies of the process as p
     7. In some cases, you may have to add the `-a` flag after the script name (e.g.: `sudo ./automate-eGPU.sh -a`). If not successful with `-a`, run it again but now with the `-m` flag (e.g.: `sudo ./automate-eGPU.sh -m`), start over and skip this step.
 12. Shut down your computer.
 13. Connect your eGPU enclosure and boot your computer:
-    i. In most cases it should work with the eGPU connected before turning the computer on.
-    ii. In case you see an indefinite black screen, only plug the eGPU after the chime sound, just when the Apple logo shows up.
+    1. In most cases it should work with the eGPU connected before turning the computer on.
+    2. In case you see an indefinite black screen, only plug the eGPU after the chime sound, just when the Apple logo shows up.
 14. Voilà!
 
 ### CUDA on macOS
