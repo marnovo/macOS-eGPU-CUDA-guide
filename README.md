@@ -181,6 +181,8 @@ as it is very extensive, detailed and up-to-date.
 So far you can trust it, but you might run into a few quirks covered below. 
 As a rule-of-thumb, mind your macOS, Xcode, NVIDIA drivers and CUDA versions and *always research before updating any of them*.
 
+After installing CUDA, you may want to download and run [CUDA-Z](http://cuda-z.sourceforge.net/) for testing and statistics.
+
 #### Known CUDA bugs and quirks
 
 ##### At compile time
