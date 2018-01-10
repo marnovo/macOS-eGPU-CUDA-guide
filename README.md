@@ -179,7 +179,8 @@ I will do my best to keep this updated with the intrincacies of the process as p
 For now I recommend [NVIDIA's CUDA on macOS installation guide](http://docs.nvidia.com/cuda/cuda-installation-guide-mac-os-x/), 
 as it is very extensive, detailed and up-to-date. 
 So far you can trust it, but you might run into a few quirks covered below. 
-As a rule-of-thumb, mind your macOS, Xcode, NVIDIA drivers and CUDA versions and *always research before updating any of them*.
+As a rule-of-thumb, mind your macOS, Xcode, NVIDIA drivers, CUDA, cuDNN versions, as well as their compatibility with your machine learning library of choice and *always research before updating any of them*.
+This effectively means that at a certain point in time you will likely be running at least one of those (and eventually even all) in not-so-cutting-edge versions—to be fair, like in most of modern software development.
 
 After installing CUDA, you may want to download and run [CUDA-Z](http://cuda-z.sourceforge.net/) for testing and statistics.
 
