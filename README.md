@@ -103,7 +103,7 @@ I will do my best to keep this updated with the intrincacies of the process as p
 
 ### eGPU on macOS High Sierra
 
-1. Install macOS High Sierra (at this point v13.1).
+1. Install macOS High Sierra (works with v13.1–v13.3). Please note [v13.4+ may cause you trouble](https://github.com/marnovo/macOS-eGPU-CUDA-guide/issues/6).
 2. Check if [macOS System Integrity Protection](https://support.apple.com/en-us/HT204899) (SIP) is enabled and/or enable it:
     1. Boot the computer in recovery mode: press and hold `Command⌘ + R` when hearing the chime sound.
     2. Open the `Terminal` application from the top menu.
