@@ -16,6 +16,7 @@ plus references, tutorials and generalizations that will apply to most hardware.
     - [CUDA Programming and Machine Learning](#cuda-programming-and-machine-learning)
     - [Gaming](#gaming)
 - [Step-by-step Tutorials](#step-by-step-tutorials)
+  - [eGPU on macOS Mojave](#egpu-on-macos-mojave)
   - [eGPU on macOS High Sierra](#egpu-on-macos-high-sierra)
   - [eGPU on macOS Sierra and earlier](#egpu-on-macos-sierra-and-earlier)
   - [CUDA on macOS](#cuda-on-macos)
@@ -32,8 +33,8 @@ The ports/cables/adapters listed are simply the ones from the reference rig.
 You can probably mix and match hardware in `n→∞` different ways using the very same (or similar) software steps.
 Just make sure to have a reasonable idea about your likelihood of success *before* you go on a buying spree.
 
-**Tip:** check [eGPU.io's](https://egpu.io/external-gpu-implementations-table/) for other reference implementations, 
-Linux, macOS, Windows (pure or bootcamped) all included. Wealthy source of information, very helpful folks.
+**Tip:** check [eGPU.io's](https://egpu.io/build-guides/) for a list of other reference implementations, 
+Linux, macOS, Windows (pure or bootcamped) all included. A wealthy source of information.
 
 #### About Thunderbolt
 
@@ -54,6 +55,7 @@ see a [sample comparison](https://egpu.io/forums/mac-setup/pcie-slot-dgpu-vs-thu
 As usual, your mileage may vary and take things with a grain of salt.
 
 **TL;DR on Thunderbolt:**
+
 - If you are not restricted to TB2 because of an older laptop, go for a TB3->TB3 solution.
 - If you are restricted to TB2, you can choose to go TB2->TB2 (cheaper) or TB3->TB2 (upgradable in the long term).
 
@@ -101,7 +103,25 @@ These tutorials are meant to be *very* (one could say overly) descriptive.
 Nonetheless, for reasons unknown, you may eventually find some slight variations. 
 I will do my best to keep this updated with the intrincacies of the process as people report it.
 
+### eGPU on macOS Mojave
+
+Applies to macOS Mojave (v10.14.X):
+
+Support is still experimental and largely untested given the current Beta status of Mojave.
+Please refer to the corresponding [macOS 10.14 support issue](https://github.com/marnovo/macOS-eGPU-CUDA-guide/issues/8).
+
 ### eGPU on macOS High Sierra
+
+#### Applies to macOS High Sierra (10.13.4+)
+
+Support has improved substantially in the last months since macOS 10.13.4, both because of Apple and the eGPU community.
+
+Currently the best alternatives are:
+
+- [mayankk2308/purge-wrangler](https://github.com/mayankk2308/purge-wrangler)
+- [goalque's automate-eGPU-EFI](https://egpu.io/forums/mac-setup/two-new-egpu-solutions-on-macos-10-13-4-pure-efi-and-hybrid/)
+
+#### Applies to macOS High Sierra (10.13.3-)
 
 1. Install macOS High Sierra (works with v13.1–v13.3). Please note [v13.4–v13.5+ support is still experimental](https://github.com/marnovo/macOS-eGPU-CUDA-guide/issues/6).
 2. Check if [macOS System Integrity Protection](https://support.apple.com/en-us/HT204899) (SIP) is enabled and/or enable it:
@@ -128,6 +148,8 @@ I will do my best to keep this updated with the intrincacies of the process as p
 12. Voilà!
 
 ### eGPU on macOS Sierra and earlier
+
+#### Applies to macOS Sierra (v10.12.X)
 
 1. Install macOS Sierra or slightly earlier (at this point v12.6).
 2. Check if [macOS System Integrity Protection](https://support.apple.com/en-us/HT204899) (SIP) is enabled and/or enable it:
@@ -231,6 +253,6 @@ The fix in this case involves creating a symbolic link between the library calle
 
 MIT License
 
-Copyright (c) 2017 Marcelo Novaes
+Copyright (c) 2017-2018 Marcelo Novaes
 
 For more information, see [LICENSE](LICENSE).
