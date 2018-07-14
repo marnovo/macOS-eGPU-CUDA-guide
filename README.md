@@ -104,7 +104,8 @@ other options can be checked at [eGPU.io buyer's guide](https://egpu.io/external
 
 - [Tensorflow](https://www.tensorflow.org)
 - [CUDA-z](http://cuda-z.sourceforge.net/) 
-- [set-eGPU.sh](https://github.com/mayankk2308/set-egpu) 
+- [set-eGPU.sh](https://github.com/mayankk2308/set-egpu)
+- [nvidia-update](https://github.com/Benjamin-Dobell/nvidia-update)
 
 #### Gaming
 
