@@ -119,7 +119,7 @@ I will do my best to keep this updated with the intrincacies of the process as p
 
 ### eGPU on macOS Mojave
 
-Applies to macOS Mojave (v10.14.X):
+#### Applies to macOS Mojave (v10.14.X):
 
 Support is still experimental and largely untested given the current Beta status of Mojave.
 Please refer to the corresponding [macOS 10.14 support issue](https://github.com/marnovo/macOS-eGPU-CUDA-guide/issues/8).
@@ -134,6 +134,8 @@ Currently the best alternatives are:
 
 - [mayankk2308/purge-wrangler](https://github.com/mayankk2308/purge-wrangler)
 - [goalque's automate-eGPU-EFI](https://egpu.io/forums/mac-setup/two-new-egpu-solutions-on-macos-10-13-4-pure-efi-and-hybrid/)
+
+Detailed step-by-step guides will be provided over time as I am able to test them.
 
 #### Applies to macOS High Sierra (10.13.3-)
 
