@@ -1,6 +1,7 @@
 # Guide on running NVIDIA eGPUs (with CUDA) on macOS
 
-Sample set up for [CUDA](https://developer.nvidia.com/about-cuda) programming for machine learning and gaming on [macOS](https://www.wikiwand.com/en/MacOS) using a NVIDIA eGPU, 
+Sample setup guide for [CUDA](https://developer.nvidia.com/about-cuda) programming for
+machine learning and gaming on [macOS](https://www.wikiwand.com/en/MacOS) using a NVIDIA eGPU, 
 plus references, tutorials and generalizations that will apply to most hardware.
 
 ## Table of Contents
@@ -12,8 +13,10 @@ plus references, tutorials and generalizations that will apply to most hardware.
     - [Main components](#main-components)
     - [Cables and adapters](#cables-and-adapters)
   - [Software](#software)
-    - [General](#general)
-    - [CUDA Programming and Machine Learning](#cuda-programming-and-machine-learning)
+    - [Apple](#apple)
+    - [NVIDIA](#nvidia)
+    - [eGPU Enabling](#egpu-enabling)
+    - [Other](#other)
     - [Gaming](#gaming)
 - [Step-by-step Tutorials](#step-by-step-tutorials)
   - [eGPU on macOS Mojave](#egpu-on-macos-mojave)
@@ -76,26 +79,37 @@ other options can be checked at [eGPU.io buyer's guide](https://egpu.io/external
 
 ### Software
 
-#### General
+#### Apple
 
-- [macOS High Sierra](https://www.apple.com/lae/macos/high-sierra/) or [macOS Sierra](https://www.apple.com/lae/macos/sierra/) or earlier.
+- macOS native installation:
+  - [macOS Mojave (10.14)](https://www.apple.com/lae/macos/mojave/)
+  - [macOS High Sierra (10.13)](https://www.apple.com/lae/macos/high-sierra/)
+  - [macOS Sierra (10.12)](https://www.apple.com/lae/macos/sierra/) or earlier.
 - [macOS SIP disabling](https://www.igeeksblog.com/how-to-disable-system-integrity-protection-on-mac/)
+
+#### NVIDIA
+
+- [NVIDIA Web drivers](https://www.tonymacx86.com/nvidia-drivers/), just match your OS version with driver version.
+- [NVIDIA CUDA drivers](http://docs.nvidia.com/cuda/cuda-installation-guide-mac-os-x/)
+- [cuDNN](https://developer.nvidia.com/cudnn)
+
+#### eGPU Enabling
+
+- Please refer to the [Step-by-step Tutorials](#step-by-step-tutorials).
 - eGPU enabling & automation:
   - If on macOS 13.1 (High Sierra or maybe later): [NVIDIA eGPU v2](https://egpu.io/forums/mac-setup/wip-nvidia-egpu-support-for-high-sierra/paged/12/#post-23263) 
   - If on macOS 12.6 (Sierra) or earlier: [Automate eGPU script](https://github.com/goalque/automate-eGPU)
-- [NVIDIA Web drivers](https://www.tonymacx86.com/nvidia-drivers/), just match your OS version with driver version.
 
-#### CUDA Programming and Machine Learning
+#### Other
 
-- [NVIDIA CUDA drivers](http://docs.nvidia.com/cuda/cuda-installation-guide-mac-os-x/)
 - [Tensorflow](https://www.tensorflow.org)
-- [cuDNN](https://developer.nvidia.com/cudnn)
 - [CUDA-z](http://cuda-z.sourceforge.net/) 
+- [set-eGPU.sh](https://github.com/mayankk2308/set-egpu) 
 
 #### Gaming
 
 - [WINE](https://www.winehq.org): for running Windows games on macOS (or Linux).
-- [Wineskin Winery](http://wineskin.urgesoftware.com/tiki-index.php), or [WineBottler](http://winebottler.kronenberg.org/) or even possibly [CrossOver](https://www.codeweavers.com/products/crossover-mac/features): related to WINE above, to make things easier.
+- [Wineskin Winery](https://github.com/vitor251093/wineskin), or [WineBottler](http://winebottler.kronenberg.org/) or even possibly [CrossOver](https://www.codeweavers.com/products/crossover-mac/features): related to WINE above, to make things easier.
 
 ## Step-by-step Tutorials
 
