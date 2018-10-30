@@ -122,7 +122,7 @@ I will do my best to keep this updated with the intrincacies of the process as p
 
 #### Applies to macOS Mojave (v10.14.X):
 
-Support is still experimental and largely untested given the current Beta status of Mojave.
+Support is likely yet untested. The lack of NVIDIA web drivers compatible with Mojave is holding the community back.
 Please refer to the corresponding [macOS 10.14 support issue](https://github.com/marnovo/macOS-eGPU-CUDA-guide/issues/8).
 
 ### eGPU on macOS High Sierra
