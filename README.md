@@ -13,10 +13,13 @@ Includes references, tutorials and generalizations that will apply to most hardw
     - [Main components](#main-components)
     - [Cables and adapters](#cables-and-adapters)
   - [Software](#software)
-    - [General](#general)
-    - [CUDA Programming and Machine Learning](#cuda-programming-and-machine-learning)
+    - [Apple](#apple)
+    - [NVIDIA](#nvidia)
+    - [eGPU Enabling](#egpu-enabling)
+    - [Other](#other)
     - [Gaming](#gaming)
 - [Step-by-step Tutorials](#step-by-step-tutorials)
+  - [eGPU on macOS Mojave](#egpu-on-macos-mojave)
   - [eGPU on macOS High Sierra](#egpu-on-macos-high-sierra)
   - [eGPU on macOS Sierra and earlier](#egpu-on-macos-sierra-and-earlier)
   - [CUDA on macOS](#cuda-on-macos)
@@ -77,18 +80,29 @@ other options can be checked at [eGPU.io buyer's guide](https://egpu.io/external
 
 ### Software
 
-#### General
+#### Apple
 
-- [macOS High Sierra](https://www.apple.com/lae/macos/high-sierra/) or [macOS Sierra](https://www.apple.com/lae/macos/sierra/) or earlier.
+- macOS native installation:
+  - [macOS Mojave (10.14)](https://www.apple.com/lae/macos/mojave/)
+  - [macOS High Sierra (10.13)](https://www.apple.com/lae/macos/high-sierra/)
+  - [macOS Sierra (10.12)](https://www.apple.com/lae/macos/sierra/) or earlier.
 - [macOS SIP disabling](https://www.igeeksblog.com/how-to-disable-system-integrity-protection-on-mac/)
+
+#### NVIDIA
+
+- [NVIDIA Web drivers](https://www.tonymacx86.com/nvidia-drivers/), just match your OS version with driver version.
+- [NVIDIA CUDA drivers](http://docs.nvidia.com/cuda/cuda-installation-guide-mac-os-x/)
+- [cuDNN](https://developer.nvidia.com/cudnn)
+
+#### eGPU Enabling
+
+- Please refer to the [Step-by-step Tutorials](#step-by-step-tutorials).
 - eGPU enabling & automation:
   - If on macOS 13.1 (High Sierra or maybe later): [NVIDIA eGPU v2](https://egpu.io/forums/mac-setup/wip-nvidia-egpu-support-for-high-sierra/paged/12/#post-23263)
   - If on macOS 12.6 (Sierra) or earlier: [Automate eGPU script](https://github.com/goalque/automate-eGPU)
-- [NVIDIA Web drivers](https://www.tonymacx86.com/nvidia-drivers/), just match your OS version with driver version.
 
-#### CUDA Programming and Machine Learning
+#### Other
 
-- [NVIDIA CUDA drivers](http://docs.nvidia.com/cuda/cuda-installation-guide-mac-os-x/)
 - [Tensorflow](https://www.tensorflow.org)
 - [cuDNN](https://developer.nvidia.com/cudnn)
 - [CUDA-z](http://cuda-z.sourceforge.net/)
@@ -105,6 +119,14 @@ other options can be checked at [eGPU.io buyer's guide](https://egpu.io/external
     - [Mac OS X 10.6–10.13, original but unmantained port](http://wineskin.urgesoftware.com/tiki-index.php)
   - [In-depth DIY guide of WINE on macOS](https://github.com/Gcenx/wine-on-mac): if you prefer to do it your way or want to know things more in depth.
 - [Parallels Desktop](https://kb.parallels.com/124266): Virtualization (VM) option; less optimal for gaming than WINE.
+- [CUDA-z](http://cuda-z.sourceforge.net/) 
+- [set-eGPU.sh](https://github.com/mayankk2308/set-egpu)
+- [nvidia-update](https://github.com/Benjamin-Dobell/nvidia-update)
+
+#### Gaming
+
+- [WINE](https://www.winehq.org): for running Windows games on macOS (or Linux).
+- [Wineskin Winery](https://github.com/vitor251093/wineskin), or [WineBottler](http://winebottler.kronenberg.org/) or even possibly [CrossOver](https://www.codeweavers.com/products/crossover-mac/features): related to WINE above, to make things easier.
 
 ## Step-by-step Tutorials
 
@@ -112,9 +134,29 @@ These tutorials are meant to be *very* (one could say overly) descriptive.
 Nonetheless, for reasons unknown, you may eventually find some slight variations.
 I will do my best to keep this updated with the intrincacies of the process as people report it.
 
+### eGPU on macOS Mojave
+
+#### Applies to macOS Mojave (v10.14.X):
+
+Support is likely yet untested. The lack of NVIDIA web drivers compatible with Mojave is holding the community back.
+Please refer to the corresponding [macOS 10.14 support issue](https://github.com/marnovo/macOS-eGPU-CUDA-guide/issues/8).
+
 ### eGPU on macOS High Sierra
 
-1. Install macOS High Sierra (at this point v13.1).
+#### Applies to macOS High Sierra (10.13.4+)
+
+Support has improved substantially in the last months since macOS 10.13.4, both because of Apple and the eGPU community.
+
+Currently the best alternatives are:
+
+- [mayankk2308/purge-wrangler](https://github.com/mayankk2308/purge-wrangler)
+- [goalque's automate-eGPU-EFI](https://egpu.io/forums/mac-setup/two-new-egpu-solutions-on-macos-10-13-4-pure-efi-and-hybrid/)
+
+Detailed step-by-step guides will be provided over time as I am able to test them.
+
+#### Applies to macOS High Sierra (10.13.3-)
+
+1. Install macOS High Sierra (works with v13.1–v13.3). Please note [v13.4–v13.5+ support is still experimental](https://github.com/marnovo/macOS-eGPU-CUDA-guide/issues/6).
 2. Check if [macOS System Integrity Protection](https://support.apple.com/en-us/HT204899) (SIP) is enabled and/or enable it:
     1. Boot the computer in recovery mode: press and hold `Command⌘ + R` when hearing the chime sound.
     2. Open the `Terminal` application from the top menu.
@@ -139,6 +181,8 @@ I will do my best to keep this updated with the intrincacies of the process as p
 11. Voilà!
 
 ### eGPU on macOS Sierra and earlier
+
+#### Applies to macOS Sierra (v10.12.X)
 
 1. Install macOS Sierra or slightly earlier (at this point v12.6).
 2. Check if [macOS System Integrity Protection](https://support.apple.com/en-us/HT204899) (SIP) is enabled and/or enable it:
@@ -187,10 +231,11 @@ I will do my best to keep this updated with the intrincacies of the process as p
 
 ### CUDA on macOS
 
-For now I recommend [NVIDIA's CUDA on macOS installation guide](http://docs.nvidia.com/cuda/cuda-installation-guide-mac-os-x/),
-as it is very extensive, detailed and up-to-date.
-So far you can trust it, but you might run into a few quirks covered below.
-As a rule-of-thumb, mind your macOS, Xcode, NVIDIA drivers and CUDA versions and *always research before updating any of them*.
+For now I recommend [NVIDIA's CUDA on macOS installation guide](http://docs.nvidia.com/cuda/cuda-installation-guide-mac-os-x/), 
+as it is very extensive, detailed and up-to-date. 
+So far you can trust it, but you might run into a few quirks covered below. 
+As a rule-of-thumb, mind your macOS, Xcode, NVIDIA drivers, CUDA, cuDNN versions, as well as their compatibility with your machine learning library of choice and *always research before updating any of them*.
+This effectively means that at a certain point in time you will likely be running at least one of those (and eventually even all) in not-so-cutting-edge versions—to be fair, like in most of modern software development.
 
 After installing CUDA, you may want to download and run [CUDA-Z](http://cuda-z.sourceforge.net/) for testing and statistics.
 
@@ -242,6 +287,6 @@ The fix in this case involves creating a symbolic link between the library calle
 
 MIT License
 
-Copyright (c) 2017 Marcelo Novaes
+Copyright (c) 2017-2020 Marcelo Novaes
 
 For more information, see [LICENSE](LICENSE).
