@@ -106,6 +106,8 @@ other options can be checked at [eGPU.io buyer's guide](https://egpu.io/external
 - [Tensorflow](https://www.tensorflow.org)
 - [cuDNN](https://developer.nvidia.com/cudnn)
 - [CUDA-z](http://cuda-z.sourceforge.net/)
+- [set-eGPU.sh](https://github.com/mayankk2308/set-egpu)
+- [nvidia-update](https://github.com/Benjamin-Dobell/nvidia-update)
 
 #### Gaming
 
@@ -119,14 +121,6 @@ other options can be checked at [eGPU.io buyer's guide](https://egpu.io/external
     - [Mac OS X 10.6–10.13, original but unmantained port](http://wineskin.urgesoftware.com/tiki-index.php)
   - [In-depth DIY guide of WINE on macOS](https://github.com/Gcenx/wine-on-mac): if you prefer to do it your way or want to know things more in depth.
 - [Parallels Desktop](https://kb.parallels.com/124266): Virtualization (VM) option; less optimal for gaming than WINE.
-- [CUDA-z](http://cuda-z.sourceforge.net/) 
-- [set-eGPU.sh](https://github.com/mayankk2308/set-egpu)
-- [nvidia-update](https://github.com/Benjamin-Dobell/nvidia-update)
-
-#### Gaming
-
-- [WINE](https://www.winehq.org): for running Windows games on macOS (or Linux).
-- [Wineskin Winery](https://github.com/vitor251093/wineskin), or [WineBottler](http://winebottler.kronenberg.org/) or even possibly [CrossOver](https://www.codeweavers.com/products/crossover-mac/features): related to WINE above, to make things easier.
 
 ## Step-by-step Tutorials
 
@@ -136,7 +130,7 @@ I will do my best to keep this updated with the intrincacies of the process as p
 
 ### eGPU on macOS Mojave
 
-#### Applies to macOS Mojave (v10.14.X):
+#### Applies to macOS Mojave (v10.14.X)
 
 Support is likely yet untested. The lack of NVIDIA web drivers compatible with Mojave is holding the community back.
 Please refer to the corresponding [macOS 10.14 support issue](https://github.com/marnovo/macOS-eGPU-CUDA-guide/issues/8).
@@ -231,9 +225,9 @@ Detailed step-by-step guides will be provided over time as I am able to test the
 
 ### CUDA on macOS
 
-For now I recommend [NVIDIA's CUDA on macOS installation guide](http://docs.nvidia.com/cuda/cuda-installation-guide-mac-os-x/), 
-as it is very extensive, detailed and up-to-date. 
-So far you can trust it, but you might run into a few quirks covered below. 
+For now I recommend [NVIDIA's CUDA on macOS installation guide](http://docs.nvidia.com/cuda/cuda-installation-guide-mac-os-x/),
+as it is very extensive, detailed and up-to-date.
+So far you can trust it, but you might run into a few quirks covered below.
 As a rule-of-thumb, mind your macOS, Xcode, NVIDIA drivers, CUDA, cuDNN versions, as well as their compatibility with your machine learning library of choice and *always research before updating any of them*.
 This effectively means that at a certain point in time you will likely be running at least one of those (and eventually even all) in not-so-cutting-edge versions—to be fair, like in most of modern software development.
 
