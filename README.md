@@ -92,8 +92,16 @@ other options can be checked at [eGPU.io buyer's guide](https://egpu.io/external
 
 #### Gaming
 
-- [WINE](https://www.winehq.org): for running Windows games on macOS (or Linux).
-- [Wineskin Winery](http://wineskin.urgesoftware.com/tiki-index.php), or [WineBottler](http://winebottler.kronenberg.org/) or even possibly [CrossOver](https://www.codeweavers.com/products/crossover-mac/features): related to WINE above, to make things easier.
+- [WINE](https://www.winehq.org): for running Windows applications and games on macOS (or Linux) with a thin translation layer.
+  There are many tools which make the process of using WINE more straightforward and scalable; from the simplest to the most DYI:
+  - [PortingKit](http://portingkit.com/): provides an extensive game library of tested "recipes" that help you creating standalone app wrappers; based on Wineskin Winery.
+  - [CrossOver](https://www.codeweavers.com/products/crossover-mac/features): commercial product by the maintainer of the WINE project, provides "recipes" for many applications and games; more robust and complete than PortingKit.
+  - [WineBottler](http://winebottler.kronenberg.org/): a free, smaller and less maintained version that follows a concept akin to Crossover.
+  - **Wineskin Winery**: allows you to create standalone app wrappers with a high degree of customization; prefer the first port
+    - [macOS 10.9 and later, currently maintained port](https://github.com/Gcenx/WineskinServer)
+    - [Mac OS X 10.6–10.13, original but unmantained port](http://wineskin.urgesoftware.com/tiki-index.php)
+  - [In-depth DIY guide of WINE on macOS](https://github.com/Gcenx/wine-on-mac): if you prefer to do it your way or want to know things more in depth.
+- [Parallels Desktop](https://kb.parallels.com/124266): Virtualization (VM) option; less optimal for gaming than WINE.
 
 ## Step-by-step Tutorials
 
