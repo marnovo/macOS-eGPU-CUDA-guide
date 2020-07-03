@@ -126,7 +126,7 @@ other options can be checked at [eGPU.io buyer's guide](https://egpu.io/external
 
 These tutorials are meant to be *very* (one could say overly) descriptive.
 Nonetheless, for reasons unknown, you may eventually find some slight variations.
-I will do my best to keep this updated with the intrincacies of the process as people report it.
+I will do my best to keep this updated with the intricacies of the process as people report it.
 
 ### eGPU on macOS Mojave
 
@@ -222,6 +222,10 @@ Detailed step-by-step guides will be provided over time as I am able to test the
     1. In most cases it should work with the eGPU connected before turning the computer on.
     2. In case you see an indefinite black screen, only plug the eGPU after the chime sound, just when the Apple logo shows up.
 15. Voilà!
+
+### Troubleshooting eGPU on macOS
+
+- [Troubleshooting eGPUs on macOS egpu.io guide](https://egpu.io/forums/mac-setup/guide-troubleshooting-egpus-on-macos/).
 
 ### CUDA on macOS
 
