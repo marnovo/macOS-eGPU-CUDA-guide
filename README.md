@@ -4,6 +4,13 @@ Sample set up for [CUDA](https://developer.nvidia.com/about-cuda) programming fo
 and gaming on [macOS](https://www.wikiwand.com/en/MacOS) using a NVIDIA eGPU.
 Includes references, tutorials and generalizations that will apply to most hardware.
 
+---
+
+_**Important notice:** as of 2020, the last compatible versions are macOS High Sierra (10.13) and NVIDIA CUDA 10.2.
+For more information, see [eGPU on macOS Mojave and up](#egpu-on-macos-mojave-and-up)._
+
+---
+
 ## Table of Contents
 
 - [Guide on running NVIDIA eGPUs (with CUDA) on macOS](#guide-on-running-nvidia-egpus-with-cuda-on-macos)
@@ -21,8 +28,8 @@ Includes references, tutorials and generalizations that will apply to most hardw
       - [Other](#other)
       - [Gaming](#gaming)
   - [Step-by-step Tutorials](#step-by-step-tutorials)
-    - [eGPU on macOS Mojave](#egpu-on-macos-mojave)
-      - [Applies to macOS Mojave (v10.14.X)](#applies-to-macos-mojave-v1014x)
+    - [eGPU on macOS Mojave and up](#egpu-on-macos-mojave-and-up)
+      - [Applies to macOS Mojave (10.14), Catalina (10.15), Big Sur (11)](#applies-to-macos-mojave-1014-catalina-1015-big-sur-11)
     - [eGPU on macOS High Sierra](#egpu-on-macos-high-sierra)
       - [Applies to macOS High Sierra (10.13.4+)](#applies-to-macos-high-sierra-10134)
       - [Applies to macOS High Sierra (10.13.3-)](#applies-to-macos-high-sierra-10133-)
@@ -137,12 +144,12 @@ These tutorials are meant to be *very* (one could say overly) descriptive.
 Nonetheless, for reasons unknown, you may eventually find some slight variations.
 I will do my best to keep this updated with the intricacies of the process as people report it.
 
-### eGPU on macOS Mojave
+### eGPU on macOS Mojave and up
 
-#### Applies to macOS Mojave (v10.14.X)
+#### Applies to macOS Mojave (10.14), Catalina (10.15), Big Sur (11)
 
-Support is likely yet untested. The lack of NVIDIA web drivers compatible with Mojave is holding the community back.
-Please refer to the corresponding [macOS 10.14 support issue](https://github.com/marnovo/macOS-eGPU-CUDA-guide/issues/8).
+Fair to assume at this point that macOS 10.14 and over will never be supported by NVIDIA CUDA, as NVIDIA and Apple got into a deadlock.
+CUDA 10.2 is the last to support macOS up to 10.13. Please refer to [macOS 10.14 support issue](https://github.com/marnovo/macOS-eGPU-CUDA-guide/issues/8).
 
 ### eGPU on macOS High Sierra
 
