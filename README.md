@@ -22,7 +22,7 @@ Includes references, tutorials and generalizations that will apply to most hardw
       - [Gaming](#gaming)
   - [Step-by-step Tutorials](#step-by-step-tutorials)
     - [eGPU on macOS Mojave](#egpu-on-macos-mojave)
-      - [Applies to macOS Mojave (v10.14.X)](#applies-to-macos-mojave-v1014x)
+      - [Applies to macOS Mojave (10.14), Catalina (10.15), Big Sur (11)](#applies-to-macos-mojave-1014-catalina-1015-big-sur-11)
     - [eGPU on macOS High Sierra](#egpu-on-macos-high-sierra)
       - [Applies to macOS High Sierra (10.13.4+)](#applies-to-macos-high-sierra-10134)
       - [Applies to macOS High Sierra (10.13.3-)](#applies-to-macos-high-sierra-10133-)
@@ -139,10 +139,10 @@ I will do my best to keep this updated with the intricacies of the process as pe
 
 ### eGPU on macOS Mojave
 
-#### Applies to macOS Mojave (v10.14.X)
+#### Applies to macOS Mojave (10.14), Catalina (10.15), Big Sur (11)
 
-Support is likely yet untested. The lack of NVIDIA web drivers compatible with Mojave is holding the community back.
-Please refer to the corresponding [macOS 10.14 support issue](https://github.com/marnovo/macOS-eGPU-CUDA-guide/issues/8).
+Fair to assume at this point that macOS 10.14 and over will never be supported by NVIDIA CUDA, as NVIDIA and Apple got into a deadlock.
+CUDA 10.2 is the last to support macOS up to 10.13. Please refer to [macOS 10.14 support issue](https://github.com/marnovo/macOS-eGPU-CUDA-guide/issues/8).
 
 ### eGPU on macOS High Sierra
 
